@@ -18,8 +18,8 @@ on:
 #    types: [published]
 
 # 点赞触发
-#  watch:
-#    types: [started]
+  watch:
+    types: [started]
 
 # 编辑触发
   push:
@@ -42,7 +42,7 @@ env:
   # 分支
   BRANCH: R7800-Lean
   # Github 用户名
-  GITHUB_USER_NAME: ClayMoreBoy
+  GITHUB_USER_NAME: MrTheUniverse
   # Github 邮箱
   GITHUB_USER_EMAIL: ${{ secrets.EMAIL }}
   # Github
@@ -54,7 +54,7 @@ env:
   # 创建+上传发布
   CREATE_RELEASE: true
   # 编译者
-  BUILD_USER: ClayMoreBoy
+  BUILD_USER: MrTheUniverse
   # 微信通知
   SEND_WECHAT_MSG: false
 
