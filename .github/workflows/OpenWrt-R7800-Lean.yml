@@ -61,7 +61,7 @@ env:
 jobs:
   build:
     if: github.event.repository.owner.id == github.event.sender.id
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
     # 校验本地文件
@@ -79,7 +79,8 @@ jobs:
         sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php* android* mssql-tools msodbcsql17
         sudo -E apt-get update -y
         sudo -E apt-get full-upgrade -y        
-        sudo -E apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs gcc-multilib g++-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler antlr3 gperf swig
+       # sudo -E apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs gcc-multilib g++-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler antlr3 gperf swig
+        sudo -E apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync
         sudo -E ln -sf /usr/bin/gcc-8 /usr/bin/gcc
         sudo -E ln -sf /usr/bin/g++-8 /usr/bin/g++
         sudo -E ln -sf /usr/bin/gcc-ar-8 /usr/bin/gcc-ar
@@ -148,7 +149,6 @@ jobs:
       id: compile
       run: |
         echo -e "$(nproc) thread compile"
-        make package/feeds/luci/luci-base/compile V=99
         make -j$(nproc) || make -j1 V=s
         echo "::set-output name=status::success"
     
