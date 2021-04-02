@@ -68,8 +68,8 @@ touch ./.config
 
 # 编译者信息
 cat >> .config <<EOF
-CONFIG_KERNEL_BUILD_USER="ClayMoreBoy"
-CONFIG_KERNEL_BUILD_DOMAIN="GitHub Actions @ ClayMoreBoy"
+CONFIG_KERNEL_BUILD_USER="MrTheUniverse"
+CONFIG_KERNEL_BUILD_DOMAIN="GitHub Actions @ MrTheUniverse"
 EOF
 
 # 编译R7800固件:

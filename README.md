@@ -5,7 +5,7 @@
  [![Lienol](https://img.shields.io/badge/Package-Lienol-blueviolet.svg?style=flat&logo=appveyor)](https://github.com/Lienol/openwrt-package)  [![CTCGFW](https://img.shields.io/badge/OpenWrt-CTCGFW-orange.svg?style=flat&logo=appveyor)](https://github.com/project-openwrt/openwrt) [![ClayMoreBoy](https://img.shields.io/badge/Mod-ClayMoreBoy-success.svg?style=flat&logo=appveyor)](https://github.com/ClayMoreBoy/OpenWrt-Actions-R7800)
 
 ## 固件下载
-网件R7800：[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ClayMoreBoy/OpenWrt-Actions-R7800?style=for-the-badge&label=Download)](https://github.com/ClayMoreBoy/OpenWrt-Actions-R7800/releases/latest)
+网件R7800：[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ClayMoreBoy/OpenWrt-Actions-R7800?style=for-the-badge&label=Download)](https://github.com/MrTheUniverse/OpenWrt-Actions-R7800/releases/latest)
 
 ## 简介：
 - 自用 OpenWrt 定制项目
@@ -36,9 +36,9 @@
 | -- SSH_ACTION: false |是否打开 SSH |
 | -- UPLOAD_BRANCH: true | 是否创建分支来存放编译固件及Package |
 | -- BRANCH: R7800 | 分支名称 |
-| -- GITHUB_USER_NAME: ClayMoreBoy | 定义Github用户名 |
+| -- GITHUB_USER_NAME: MrTheUniverse | 定义Github用户名 |
 | -- GITHUB_USER_EMAIL: ${{ secrets.EMAIL }} |定义Github用户邮箱 |
-| -- GITHUB: github.com/ClayMoreBoy/OpenWrt-Actions-R7800.git | 定义上传分支 |
+| -- GITHUB: github.com/MrTheUniverse/OpenWrt-Actions-R7800.git | 定义上传分支 |
 | -- UPLOAD_FIRMWARE: true | 是否上传固件| 
 | -- UPLOAD_COWTRANSFER: true | 是否上传固件到奶牛快传 |
 | -- CREATE_RELEASE: true | 是否创建发行版本 Release |
@@ -53,6 +53,3 @@
 | WIFI | -- | -- | password |
 
 
-## 来杯咖啡
-
-![](https://raw.githubusercontent.com/ClayMoreBoy/OpenWrt-Actions-R7800/master/Sponsor.png)
